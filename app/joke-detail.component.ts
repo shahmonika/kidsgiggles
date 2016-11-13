@@ -21,7 +21,7 @@ selector: 'my-joke-detail',
       
       
       
-      <label>New joke name: <input #newJokeName /></label>
+      <label>type ur New joke  <input #newJokeName /></label>
 <button (click)="addJoke(newJokeName.value); newJokeName.value=''">Add joke</button>
       
       </div>
