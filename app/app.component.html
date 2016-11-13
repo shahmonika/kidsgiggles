@@ -1,0 +1,59 @@
+<div class="container-fluid">
+
+    <nav class="navbar ">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">kidslaughs</a>
+            </div>
+
+
+            <ol class="nav navbar-nav navbar-right">
+                <ol class="breadcrumb">
+                <li><a href="#"> Home</a></li>
+                <li><a href="#"> Contact Us</a></li>
+                <li><a href="#"> Feedback</a></li>
+                    </ol>
+            </ol>
+        </div>
+    </nav>
+
+    <!--//<nav class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></nav>-->
+
+<div class="jumbotron">
+    <div class="container">
+    <h3>win to become star</h3>
+    <p>...</p>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Click here to Learn more</a></p>
+</div>
+    </div>
+    <div>
+    <button type="button" class="btn btn-primary">submit Jokes</button>
+    <button type="button" class="btn btn-warning">jokes</button>
+
+    <button type="button" class="btn btn-primary">most liked jokes</button>
+    </div>
+
+
+<h1>Prepare to be giggled </h1>
+    <h3>{{title}}</h3>
+
+    <ul class="jokeses">
+
+        <li *ngFor="let joke of jokeses">
+            <!--<span class="badge">{{joke._id._id}}</span> {{joke._id.description}}-->
+            <span class="badge">{{joke._id}}</span> {{joke.description}}
+        </li>
+    </ul>
+
+
+
+       <h6>vvvvvvvvvv</h6>
+    <label>New joke name: <input #newJokeName /></label>
+    <button (click)="addJoke(newJokeName.value); newJokeName.value=''">Add joke</button>
+
+<!--<my-joke-detail> </my-joke-detail>-->
+
+
+
+
+</div>
