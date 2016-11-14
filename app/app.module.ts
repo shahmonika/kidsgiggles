@@ -17,18 +17,34 @@ import { AppComponent }   from './app.component';
 
 import { JokeDetailComponent } from './joke-detail.component';
 import {JokeService} from './joke.service';
+import {ContactUsComponent} from './contact-us.component';
+import {RouterModule } from '@angular/router';
 @NgModule({
     imports:      [
         BrowserModule,
         FormsModule,
         HttpModule,
-        JsonpModule
+        JsonpModule,
+        RouterModule.forRoot([
+            {
+                path: 'contact-us',
+                component: ContactUsComponent
+            },
+            {
+                path: 'joke-detail',
+                component: JokeDetailComponent
+            }
+            ])
         ],
     declarations: [
         AppComponent ,
-        JokeDetailComponent
+        JokeDetailComponent,
+        ContactUsComponent
     ],
+
     providers:[JokeService],
     bootstrap: [ AppComponent ]
 })
+
+
 export class AppModule { }

@@ -1,35 +1,59 @@
 
-import {Component, Input,OnInit} from '@angular/core';
-import {Joke} from './joke';
-
-
+import { Component ,OnInit} from '@angular/core';
 import './rxjs-operators';
-
+import {Joke} from './joke';
 import {JokeService} from './joke.service';
 
-@Component({                                    //creating metadata{
-selector: 'my-joke-detail',
-    template: `
 
-<div>
-        <h2>submit jokes</h2>
-        
-    
-    <div >
-      <!--<h2>{{joke.description}} details!</h2>-->
-      <!--<label>id: </label>{{joke._id}}-->
-      
-      
-      
-      <label>type ur New joke  <input #newJokeName /></label>
-<button (click)="addJoke(newJokeName.value); newJokeName.value=''">Add joke</button>
-      
-      </div>
-    
-`
+
+
+
+
+@Component({
+
+    moduleId: module.id,                  // relative path
+    selector: 'joke-detail',
+    templateUrl: 'joke-detail.component.html',
+    providers:[JokeService]
+
 })
-export class JokeDetailComponent{
-    @Input()
-    joke: Joke;
 
+
+export class JokeDetailComponent implements OnInit{
+
+    mode='Observable';
+
+    ngOnInit():void{
+        this.getJokes();
+    }
+    title='jokes are here';
+    // jokeses = Jokeses;                 //jokeses exposes for binding
+    // selectedHero: Joke ;
+
+    // onSelect(joke: Joke): void {
+    //     this.selectedHero = joke ;
+    // }
+
+    joke:Joke[];
+    jokeses: Joke[];
+
+    constructor(private jokeService :JokeService){}
+
+    getJokes():void {
+        this.jokeService.getJokes().subscribe( jokeses=>this.jokeses =jokeses);
+    }
+
+
+
+    addJoke (description: string) {
+        if (!description) { return; }
+        this.jokeService.addJoke(description)
+            .subscribe(
+                joke => this.jokeses.push(joke));
+
+    }
 }
+
+
+
+

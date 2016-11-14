@@ -1,61 +1,12 @@
-// root componet ,controlling the home page view
+// root component ,controlling the home page view
 
-
-import { Component ,OnInit} from '@angular/core';
-import './rxjs-operators';
-import {Joke} from './joke';
-import {JokeService} from './joke.service';
-
-
-import { JokeDetailComponent} from './joke-detail.component';
-
-
+import { Component } from '@angular/core';
 
 @Component({
-
-     moduleId: module.id,                      // relative path
+    moduleId: module.id,
     selector: 'my-app',
-    templateUrl: 'app.component.html',
-    providers:[JokeService]
-
+    templateUrl: 'app.component.html'
 })
-
-
-export class AppComponent implements OnInit{
-
-    mode='Observable';
-
-    ngOnInit():void{
-        this.getJokes();
-    }
-    title='jokes are here';
-    // jokeses = Jokeses;                 //jokeses exposes for binding
-    // selectedHero: Joke ;
-
-    // onSelect(joke: Joke): void {
-    //     this.selectedHero = joke ;
-    // }
-
-joke:Joke[];
-    jokeses: Joke[];
-
-    constructor(private jokeService :JokeService){}
-
-    getJokes():void {
-        this.jokeService.getJokes().subscribe( jokeses=>this.jokeses =jokeses);
-    }
-
-
-
-    addJoke (description: string) {
-        if (!description) { return; }
-        this.jokeService.addJoke(description)
-            .subscribe(
-                joke => this.jokeses.push(joke));
-
-    }
+export class AppComponent {
+    title = 'Tour of Heroes';
 }
-
-
-
-

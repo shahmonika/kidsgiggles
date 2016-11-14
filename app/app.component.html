@@ -10,7 +10,9 @@
             <ol class="nav navbar-nav navbar-right">
                 <ol class="breadcrumb">
                 <li><a href="#"> Home</a></li>
-                <li><a href="#"> Contact Us</a></li>
+                <li>
+                    <a routerLink="/contact-us" >contact us</a>
+                    </li>
                 <li><a href="#"> Feedback</a></li>
                     </ol>
             </ol>
@@ -28,30 +30,17 @@
     </div>
     <div>
     <button type="button" class="btn btn-primary">submit Jokes</button>
-    <button type="button" class="btn btn-warning">jokes</button>
+    <button type="button" class="btn btn-warning"><a routerLink="/joke-detail" routerLinkActive="active"> jokes</a></button>
 
     <button type="button" class="btn btn-primary">most liked jokes</button>
     </div>
 
-
-<h1>Prepare to be giggled </h1>
-    <h3>{{title}}</h3>
-
-    <ul class="jokeses">
-
-        <li *ngFor="let joke of jokeses">
-            <!--<span class="badge">{{joke._id._id}}</span> {{joke._id.description}}-->
-            <span class="badge">{{joke._id}}</span> {{joke.description}}
-        </li>
-    </ul>
+    <router-outlet></router-outlet>
 
 
 
-       <h6>vvvvvvvvvv</h6>
-    <label>New joke name: <input #newJokeName /></label>
-    <button (click)="addJoke(newJokeName.value); newJokeName.value=''">Add joke</button>
 
-<!--<my-joke-detail> </my-joke-detail>-->
+
 
 
 

@@ -1,4 +1,4 @@
-// root componet ,controlling the home page view
+// root component ,controlling the home page view
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -10,37 +10,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-require('./rxjs-operators');
-var joke_service_1 = require('./joke.service');
 var AppComponent = (function () {
-    function AppComponent(jokeService) {
-        this.jokeService = jokeService;
-        this.mode = 'Observable';
-        this.title = 'jokes are here';
+    function AppComponent() {
+        this.title = 'Tour of Heroes';
     }
-    AppComponent.prototype.ngOnInit = function () {
-        this.getJokes();
-    };
-    AppComponent.prototype.getJokes = function () {
-        var _this = this;
-        this.jokeService.getJokes().subscribe(function (jokeses) { return _this.jokeses = jokeses; });
-    };
-    AppComponent.prototype.addJoke = function (description) {
-        var _this = this;
-        if (!description) {
-            return;
-        }
-        this.jokeService.addJoke(description)
-            .subscribe(function (joke) { return _this.jokeses.push(joke); });
-    };
     AppComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'my-app',
-            templateUrl: 'app.component.html',
-            providers: [joke_service_1.JokeService]
+            templateUrl: 'app.component.html'
         }), 
-        __metadata('design:paramtypes', [joke_service_1.JokeService])
+        __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
 }());

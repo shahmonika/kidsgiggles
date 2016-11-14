@@ -18,6 +18,8 @@ var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
 var joke_detail_component_1 = require('./joke-detail.component');
 var joke_service_1 = require('./joke.service');
+var contact_us_component_1 = require('./contact-us.component');
+var router_1 = require('@angular/router');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -27,11 +29,22 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
                 http_1.HttpModule,
-                http_1.JsonpModule
+                http_1.JsonpModule,
+                router_1.RouterModule.forRoot([
+                    {
+                        path: 'contact-us',
+                        component: contact_us_component_1.ContactUsComponent
+                    },
+                    {
+                        path: 'joke-detail',
+                        component: joke_detail_component_1.JokeDetailComponent
+                    }
+                ])
             ],
             declarations: [
                 app_component_1.AppComponent,
-                joke_detail_component_1.JokeDetailComponent
+                joke_detail_component_1.JokeDetailComponent,
+                contact_us_component_1.ContactUsComponent
             ],
             providers: [joke_service_1.JokeService],
             bootstrap: [app_component_1.AppComponent]

@@ -9,21 +9,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var joke_1 = require('./joke');
 require('./rxjs-operators');
+var joke_service_1 = require('./joke.service');
 var JokeDetailComponent = (function () {
-    function JokeDetailComponent() {
+    function JokeDetailComponent(jokeService) {
+        this.jokeService = jokeService;
+        this.mode = 'Observable';
+        this.title = 'jokes are here';
     }
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', joke_1.Joke)
-    ], JokeDetailComponent.prototype, "joke", void 0);
+    JokeDetailComponent.prototype.ngOnInit = function () {
+        this.getJokes();
+    };
+    JokeDetailComponent.prototype.getJokes = function () {
+        var _this = this;
+        this.jokeService.getJokes().subscribe(function (jokeses) { return _this.jokeses = jokeses; });
+    };
+    JokeDetailComponent.prototype.addJoke = function (description) {
+        var _this = this;
+        if (!description) {
+            return;
+        }
+        this.jokeService.addJoke(description)
+            .subscribe(function (joke) { return _this.jokeses.push(joke); });
+    };
     JokeDetailComponent = __decorate([
         core_1.Component({
-            selector: 'my-joke-detail',
-            template: "\n\n<div>\n        <h2>submit jokes</h2>\n        \n    \n    <div >\n      <!--<h2>{{joke.description}} details!</h2>-->\n      <!--<label>id: </label>{{joke._id}}-->\n      \n      \n      \n      <label>New joke name: <input #newJokeName /></label>\n<button (click)=\"addJoke(newJokeName.value); newJokeName.value=''\">Add joke</button>\n      \n      </div>\n    \n"
+            moduleId: module.id,
+            selector: 'joke-detail',
+            templateUrl: 'joke-detail.component.html',
+            providers: [joke_service_1.JokeService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [joke_service_1.JokeService])
     ], JokeDetailComponent);
     return JokeDetailComponent;
 }());
