@@ -34,6 +34,10 @@ var AppModule = (function () {
                 http_1.JsonpModule,
                 router_1.RouterModule.forRoot([
                     {
+                        path: '',
+                        component: app_component_1.AppComponent
+                    },
+                    {
                         path: 'contact-us',
                         component: contact_us_component_1.ContactUsComponent
                     },
@@ -57,8 +61,7 @@ var AppModule = (function () {
                 contact_us_component_1.ContactUsComponent,
                 submit_joke_component_1.SubmitJokeComponent, feedback_component_1.FeedbackComponent
             ],
-            providers: [joke_service_1.JokeService],
-            bootstrap: [app_component_1.AppComponent]
+            providers: [joke_service_1.JokeService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

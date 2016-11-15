@@ -26,12 +26,17 @@ import{FeedbackComponent} from './feedback.component';
         BrowserModule,
         FormsModule,
         HttpModule,
-        JsonpModule,
-        RouterModule.forRoot([
-            {
+        JsonpModule
+         ,
+         RouterModule.forRoot([
+             {
+                 path:'',
+                 component: AppComponent
+             },
+             {
                 path: 'contact-us',
                 component: ContactUsComponent
-            },
+             },
             {
                 path: 'joke-detail',
                 component: JokeDetailComponent
@@ -44,7 +49,7 @@ import{FeedbackComponent} from './feedback.component';
                 path:'feedback',
                 component:FeedbackComponent
             }
-            ])
+             ])
         ],
     declarations: [
         AppComponent ,
@@ -53,8 +58,8 @@ import{FeedbackComponent} from './feedback.component';
         SubmitJokeComponent,FeedbackComponent
     ],
 
-    providers:[JokeService],
-    bootstrap: [ AppComponent ]
+    providers:[JokeService]
+
 })
 
 
