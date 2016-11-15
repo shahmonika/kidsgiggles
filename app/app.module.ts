@@ -19,6 +19,8 @@ import { JokeDetailComponent } from './joke-detail.component';
 import {JokeService} from './joke.service';
 import {ContactUsComponent} from './contact-us.component';
 import {RouterModule } from '@angular/router';
+import{SubmitJokeComponent} from './submit-joke.component';
+import{FeedbackComponent} from './feedback.component';
 @NgModule({
     imports:      [
         BrowserModule,
@@ -33,13 +35,22 @@ import {RouterModule } from '@angular/router';
             {
                 path: 'joke-detail',
                 component: JokeDetailComponent
+            },
+            {
+                path:'submit-joke',
+                component: SubmitJokeComponent
+            },
+            {
+                path:'feedback',
+                component:FeedbackComponent
             }
             ])
         ],
     declarations: [
         AppComponent ,
         JokeDetailComponent,
-        ContactUsComponent
+        ContactUsComponent,
+        SubmitJokeComponent,FeedbackComponent
     ],
 
     providers:[JokeService],

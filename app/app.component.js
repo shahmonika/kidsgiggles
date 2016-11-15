@@ -12,6 +12,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
+        this.class = 'relative';
         this.title = 'Tour of Heroes';
     }
     AppComponent = __decorate([

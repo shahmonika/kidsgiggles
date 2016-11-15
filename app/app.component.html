@@ -13,7 +13,7 @@
                 <li>
                     <a routerLink="/contact-us" >contact us</a>
                     </li>
-                <li><a href="#"> Feedback</a></li>
+                <li><a routerLink="/feedback"> Feedback</a></li>
                     </ol>
             </ol>
         </div>
@@ -21,28 +21,20 @@
 
     <!--//<nav class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></nav>-->
 
-<div class="jumbotron">
-    <div class="container">
-    <h3>win to become star</h3>
-    <p>...</p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Click here to Learn more</a></p>
-</div>
-    </div>
+<!--<div class="jumbotron">-->
+    <!--<div class="container">-->
+    <!--<h3>win to become star</h3>-->
+    <!--<p>...</p>-->
+    <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Click here to Learn more</a></p>-->
+<!--</div>-->
+    <!--</div>-->
     <div>
-    <button type="button" class="btn btn-primary">submit Jokes</button>
-    <button type="button" class="btn btn-warning"><a routerLink="/joke-detail" routerLinkActive="active"> jokes</a></button>
+    <button type="button" class="btn btn-warning "><a routerLink="/submit-joke"> submit Jokes</a></button>
 
-    <button type="button" class="btn btn-primary">most liked jokes</button>
+    <button type="button" class="btn btn-warning active"><a routerLink="/joke-detail" routerLinkActive="active"> jokes</a></button>
+
+    <button type="button" class="btn btn-primary active">most liked jokes</button>
     </div>
 
     <router-outlet></router-outlet>
-
-
-
-
-
-
-
-
-
 </div>

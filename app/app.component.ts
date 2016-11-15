@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
     templateUrl: 'app.component.html'
 })
 export class AppComponent {
+    class='relative';
     title = 'Tour of Heroes';
 }

@@ -4,6 +4,14 @@
  */
 (function (global) {
     System.config({
+
+        defaultJSExtensions: true,
+        transpiler: false,
+        typescriptOptions: {
+            "module": "commonjs",
+            "inlineSourceMap": true,
+            "emitDecoratorMetadata": true
+        },
         paths: {
             // paths serve as alias
             'npm:': 'node_modules/'
@@ -24,7 +32,11 @@
             '@angular/upgrade': 'npm:@angular/upgrade/bundles/upgrade.umd.js',
             // other libraries
             'rxjs':                      'npm:rxjs',
-            'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'
+            'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
+            'typescript': 'node_modules/typescript/lib/typescript.js',
+            'angular2': 'node_modules/angular2',
+
+            'ts': 'npm/plugin-typescript/lib/???'
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {

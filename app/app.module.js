@@ -20,6 +20,8 @@ var joke_detail_component_1 = require('./joke-detail.component');
 var joke_service_1 = require('./joke.service');
 var contact_us_component_1 = require('./contact-us.component');
 var router_1 = require('@angular/router');
+var submit_joke_component_1 = require('./submit-joke.component');
+var feedback_component_1 = require('./feedback.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -38,13 +40,22 @@ var AppModule = (function () {
                     {
                         path: 'joke-detail',
                         component: joke_detail_component_1.JokeDetailComponent
+                    },
+                    {
+                        path: 'submit-joke',
+                        component: submit_joke_component_1.SubmitJokeComponent
+                    },
+                    {
+                        path: 'feedback',
+                        component: feedback_component_1.FeedbackComponent
                     }
                 ])
             ],
             declarations: [
                 app_component_1.AppComponent,
                 joke_detail_component_1.JokeDetailComponent,
-                contact_us_component_1.ContactUsComponent
+                contact_us_component_1.ContactUsComponent,
+                submit_joke_component_1.SubmitJokeComponent, feedback_component_1.FeedbackComponent
             ],
             providers: [joke_service_1.JokeService],
             bootstrap: [app_component_1.AppComponent]
