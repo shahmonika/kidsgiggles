@@ -31,7 +31,8 @@ import{FeedbackComponent} from './feedback.component';
          RouterModule.forRoot([
              {
                  path:'',
-                 component: AppComponent
+                 redirectTo:'/joke-detail',
+                 pathMatch:'full'
              },
              {
                 path: 'contact-us',
@@ -58,7 +59,8 @@ import{FeedbackComponent} from './feedback.component';
         SubmitJokeComponent,FeedbackComponent
     ],
 
-    providers:[JokeService]
+    providers:[JokeService],
+    bootstrap:[AppComponent]
 
 })
 

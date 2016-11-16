@@ -35,7 +35,8 @@ var AppModule = (function () {
                 router_1.RouterModule.forRoot([
                     {
                         path: '',
-                        component: app_component_1.AppComponent
+                        redirectTo: '/joke-detail',
+                        pathMatch: 'full'
                     },
                     {
                         path: 'contact-us',
@@ -61,7 +62,8 @@ var AppModule = (function () {
                 contact_us_component_1.ContactUsComponent,
                 submit_joke_component_1.SubmitJokeComponent, feedback_component_1.FeedbackComponent
             ],
-            providers: [joke_service_1.JokeService]
+            providers: [joke_service_1.JokeService],
+            bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);
