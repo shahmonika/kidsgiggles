@@ -16,11 +16,11 @@ var http_1 = require('@angular/http');
 var platform_browser_1 = require('@angular/platform-browser');
 //import the root component and add in declaration and bootstrap
 var app_component_1 = require('./app.component');
-var joke_detail_component_1 = require('./joke-detail/joke-detail.component');
+var joke_detail_component_1 = require('./components/joke-detail/joke-detail.component');
 var joke_service_1 = require('./joke.service');
-var contact_us_component_1 = require('./contact-us/contact-us.component');
-var submit_joke_component_1 = require('./submit-joke/submit-joke.component');
-var feedback_component_1 = require('./feedback/feedback.component');
+var contact_us_component_1 = require('./components/contact-us/contact-us.component');
+var submit_joke_component_1 = require('./components/submit-joke/submit-joke.component');
+var feedback_component_1 = require('./components/feedback/feedback.component');
 var app_routing_module_1 = require('./app-routing.module');
 var AppModule = (function () {
     function AppModule() {

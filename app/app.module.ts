@@ -15,12 +15,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent }   from './app.component';
 
-import { JokeDetailComponent } from './joke-detail/joke-detail.component';
+import { JokeDetailComponent } from './components/joke-detail/joke-detail.component';
 import {JokeService} from './joke.service';
-import {ContactUsComponent} from './contact-us/contact-us.component';
+import {ContactUsComponent} from './components/contact-us/contact-us.component';
 import {RouterModule } from '@angular/router';
-import{SubmitJokeComponent} from './submit-joke/submit-joke.component';
-import{FeedbackComponent} from './feedback/feedback.component';
+import{SubmitJokeComponent} from './components/submit-joke/submit-joke.component';
+import{FeedbackComponent} from './components/feedback/feedback.component';
 import {AppRoutingModule}from './app-routing.module';
 @NgModule({
     imports:      [
