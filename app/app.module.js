@@ -16,12 +16,12 @@ var http_1 = require('@angular/http');
 var platform_browser_1 = require('@angular/platform-browser');
 //import the root component and add in declaration and bootstrap
 var app_component_1 = require('./app.component');
-var joke_detail_component_1 = require('./joke-detail.component');
+var joke_detail_component_1 = require('./joke-detail/joke-detail.component');
 var joke_service_1 = require('./joke.service');
-var contact_us_component_1 = require('./contact-us.component');
-var router_1 = require('@angular/router');
-var submit_joke_component_1 = require('./submit-joke.component');
-var feedback_component_1 = require('./feedback.component');
+var contact_us_component_1 = require('./contact-us/contact-us.component');
+var submit_joke_component_1 = require('./submit-joke/submit-joke.component');
+var feedback_component_1 = require('./feedback/feedback.component');
+var app_routing_module_1 = require('./app-routing.module');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -32,29 +32,7 @@ var AppModule = (function () {
                 forms_1.FormsModule,
                 http_1.HttpModule,
                 http_1.JsonpModule,
-                router_1.RouterModule.forRoot([
-                    {
-                        path: '',
-                        redirectTo: '/joke-detail',
-                        pathMatch: 'full'
-                    },
-                    {
-                        path: 'contact-us',
-                        component: contact_us_component_1.ContactUsComponent
-                    },
-                    {
-                        path: 'joke-detail',
-                        component: joke_detail_component_1.JokeDetailComponent
-                    },
-                    {
-                        path: 'submit-joke',
-                        component: submit_joke_component_1.SubmitJokeComponent
-                    },
-                    {
-                        path: 'feedback',
-                        component: feedback_component_1.FeedbackComponent
-                    }
-                ])
+                app_routing_module_1.AppRoutingModule
             ],
             declarations: [
                 app_component_1.AppComponent,

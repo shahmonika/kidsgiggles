@@ -9,8 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-require('./rxjs-operators');
-var joke_service_1 = require('./joke.service');
+require('../rxjs-operators');
+var joke_service_1 = require('../joke.service');
 var JokeDetailComponent = (function () {
     function JokeDetailComponent(jokeService) {
         this.jokeService = jokeService;
@@ -39,9 +39,10 @@ var JokeDetailComponent = (function () {
             templateUrl: 'joke-detail.component.html',
             providers: [joke_service_1.JokeService]
         }), 
-        __metadata('design:paramtypes', [joke_service_1.JokeService])
+        __metadata('design:paramtypes', [(typeof (_a = typeof joke_service_1.JokeService !== 'undefined' && joke_service_1.JokeService) === 'function' && _a) || Object])
     ], JokeDetailComponent);
     return JokeDetailComponent;
+    var _a;
 }());
 exports.JokeDetailComponent = JokeDetailComponent;
 //# sourceMappingURL=joke-detail.component.js.map

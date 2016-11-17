@@ -1,8 +1,8 @@
 
 import { Component ,OnInit} from '@angular/core';
-import './rxjs-operators';
-import {Joke} from './joke';
-import {JokeService} from './joke.service';
+import '../rxjs-operators';
+import {Joke} from '../../joke';
+import {JokeService} from '../../joke.service';
 
 
 

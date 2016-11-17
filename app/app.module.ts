@@ -15,42 +15,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent }   from './app.component';
 
-import { JokeDetailComponent } from './joke-detail.component';
+import { JokeDetailComponent } from './joke-detail/joke-detail.component';
 import {JokeService} from './joke.service';
-import {ContactUsComponent} from './contact-us.component';
+import {ContactUsComponent} from './contact-us/contact-us.component';
 import {RouterModule } from '@angular/router';
-import{SubmitJokeComponent} from './submit-joke.component';
-import{FeedbackComponent} from './feedback.component';
+import{SubmitJokeComponent} from './submit-joke/submit-joke.component';
+import{FeedbackComponent} from './feedback/feedback.component';
+import {AppRoutingModule}from './app-routing.module';
 @NgModule({
     imports:      [
         BrowserModule,
         FormsModule,
         HttpModule,
         JsonpModule
-         ,
-         RouterModule.forRoot([
-             {
-                 path:'',
-                 redirectTo:'/joke-detail',
-                 pathMatch:'full'
-             },
-             {
-                path: 'contact-us',
-                component: ContactUsComponent
-             },
-            {
-                path: 'joke-detail',
-                component: JokeDetailComponent
-            },
-            {
-                path:'submit-joke',
-                component: SubmitJokeComponent
-            },
-            {
-                path:'feedback',
-                component:FeedbackComponent
-            }
-             ])
+         ,AppRoutingModule
+
         ],
     declarations: [
         AppComponent ,
