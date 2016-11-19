@@ -1,0 +1,60 @@
+
+<div class="panel panel-info">
+    <div class="panel-heading">your feedback is important to us</div>
+    <div class="panel-body" [hidden]="submitted">
+    <form class="form-horizontal"  role="form" #feedbackForm="ngForm" *ngIf="!active"  >
+
+
+        <div class="form-group">
+            <label for="userEmail" class="col-md-2 control-label">Email</label>
+            <div class="col-md-4">
+                <input type="email" class="form-control " id="userEmail" placeholder="Email"  #email required>
+            </div>
+        </div>
+{{email.className}}
+
+        <div class="form-group">
+            <label class="col-md-2 control-label" id="feedback" for="feedbackDescription" >Enter Feedback</label>
+            <div class="col-md-6">
+                <textarea rows="6" class="form-control" id="feedbackDescription" cols="5" name="feedback"
+                          [(ngModel)]="feedbackDescription.value"  #feedbackDescription="ngModel"   required></textarea>
+
+            </div>
+        </div>
+
+        {{feedbackDescription.value}}
+        {{feedbackDescription.className}}
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" class="col-md-2 btn btn-default"  [disabled]="!feedbackForm.form.valid" *ngIf="feedbackForm.form.valid"  data-toggle="modal"
+                data-target="#myModal" >sumit the feedback</button>
+                  </div>
+
+                  </div>
+
+          </form>
+              </div>
+
+      <!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Thank you for submitting</h4>
+            </div>
+            <div class="modal-body">
+                <p>{{msg}}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
