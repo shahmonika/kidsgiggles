@@ -35,3 +35,10 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# avoid js files
+*.js
+*.js.map
+
+#avoid webstorm
+.idea/
