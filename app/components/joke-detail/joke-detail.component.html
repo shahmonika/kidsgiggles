@@ -1,0 +1,20 @@
+<div>
+    <h1>Prepare to be giggled </h1>
+    <h3>{{title}}</h3>
+
+    <ul class="jokeses">
+
+        <li *ngFor="let joke of jokeses">
+            <!--<span class="badge">{{joke._id._id}}</span> {{joke._id.description}}-->
+            <span class="badge">{{joke._id}}</span> {{joke.description}}
+        </li>
+    </ul>
+
+
+
+    <!--<h6>vvvvvvvvvv</h6>-->
+    <!--<label>New joke name: <input #newJokeName /></label>-->
+    <!--<button (click)="addJoke(newJokeName.value); newJokeName.value=''">Add joke</button>-->
+
+    <!--<my-joke-detail> </my-joke-detail>-->
+</div>
