@@ -2,7 +2,7 @@
 <div class="panel panel-info">
     <div class="panel-heading">your feedback is important to us</div>
     <div class="panel-body" [hidden]="submitted">
-    <form class="form-horizontal"  role="form" #feedbackForm="ngForm" *ngIf="!active"  >
+    <form class="form-horizontal"  role="form" #feedbackForm="ngForm"   >
 
 
         <div class="form-group">
@@ -22,14 +22,12 @@
             </div>
         </div>
 
-        {{feedbackDescription.value}}
-        {{feedbackDescription.className}}
 
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <button type="submit" class="col-md-2 btn btn-default"  [disabled]="!feedbackForm.form.valid" *ngIf="feedbackForm.form.valid"  data-toggle="modal"
-                data-target="#myModal" >sumit the feedback</button>
+                <button type="submit" class="col-md-2 btn btn-success"  [disabled]="!feedbackForm.form.valid"   data-toggle="modal"
+                data-target="#myModal" >submit the feedback</button>
                   </div>
 
                   </div>
