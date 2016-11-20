@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {Joke} from '../../joke';
 
-
+import {FormsModule} from '@angular/forms';
 @Component({
     moduleId:module.id,
     selector:'feedback',

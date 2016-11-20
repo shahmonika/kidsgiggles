@@ -2,16 +2,36 @@
 <div class="panel panel-info">
     <div class="panel-heading">your feedback is important to us</div>
     <div class="panel-body" [hidden]="submitted">
-    <form class="form-horizontal"  role="form" #feedbackForm="ngForm"   >
+    <form class="form-horizontal"  role="form" #feedbackForm="ngForm"  (ngSubmit)="onSubmit()" >
 
 
         <div class="form-group">
+            <div class="row">
             <label for="userEmail" class="col-md-2 control-label">Email</label>
             <div class="col-md-4">
-                <input type="email" class="form-control " id="userEmail" placeholder="Email"  #email required>
+                <input type="text" class="form-control" id="userEmail" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                       name="userEmail"   [(ngModel)]="userEmail.innerText"
+                       #userEmail="ngModel"required>
             </div>
-        </div>
-{{email.className}}
+            </div>
+
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-1"></div>
+
+                   <div  *ngIf="userEmail.errors" class="col-md-4   alert alert-danger" >
+                       <div [hidden]="!userEmail.errors.required">
+                           Email is required
+                       </div>
+                       <div [hidden]="!userEmail.errors.pattern">
+                          valid Email is required
+                       </div>
+
+                     </div>
+                </div>
+            </div>
+
+{{userEmail.className}}
 
         <div class="form-group">
             <label class="col-md-2 control-label" id="feedback" for="feedbackDescription" >Enter Feedback</label>
