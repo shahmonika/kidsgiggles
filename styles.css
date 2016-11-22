@@ -14,4 +14,12 @@ body {
 }
 #userEmailerrors{
     color:firebrick;
+
+}
+.userEmail[required]{
+    border-left: 5px solid green;
+}
+.ng-invalid:not(form){
+    color:firebrick;
+
 }

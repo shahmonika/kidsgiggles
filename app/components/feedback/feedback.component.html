@@ -17,9 +17,10 @@
                     <div class="col-md-3">
                         <input type="text" class="form-control" id="userEmail" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
                                name="userEmail"   [(ngModel)]="userEmail.innerText"
-                               #userEmail="ngModel"required>
+                               #userEmail="ngModel" required>
                     </div>
                 </div>
+                {{userEmail.className}}
 
                 <div class="row">
                     <div class="col-md-1"></div>
@@ -38,23 +39,36 @@
                 </div>
             </div>
 
-            {{userEmail.className}}
+
 
             <div class="form-group">
-                <label class="col-md-2 control-label" id="feedback" for="feedbackDescription" >Enter Feedback</label>
+                <div class="row">
+                    <div class="col-xs-2"></div>
+                    <div class="col-xs-2">
+                <label class="control-label" id="feedback" for="feedbackDescription" >Enter Feedback</label>
+                        </div>
+                    </div>
+                <div class="row">
+                    <div class="col-md-2"></div>
+
                 <div class="col-md-6">
-                <textarea rows="6" class="form-control" id="feedbackDescription" cols="5" name="feedback"
+                <textarea rows="6" class="form-control" id="feedbackDescription" cols="5" name="feedback" maxlength="250"
                           [(ngModel)]="feedbackDescription.value"  #feedbackDescription="ngModel"   required></textarea>
 
                 </div>
             </div>
 
+<div class="row">
 
+</div>
+                </div>
 
             <div class="form-group">
+                <div class="row">
                 <div class="col-md-offset-2 col-md-10">
                     <button type="submit" class="col-md-2 btn btn-success"  [disabled]="!feedbackForm.form.valid"   data-toggle="modal"
                             data-target="#myModal" >submit the feedback</button>
+                </div>
                 </div>
 
             </div>
