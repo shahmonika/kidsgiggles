@@ -5,11 +5,20 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
+    "experimentalDecorators": false,
     "removeComments": false,
-    "noImplicitAny": false
-//    "typeRoots": [
-//      "node_modules/@types"
-//    ]
-  }
+    "lib": ["es2015", "dom"],
+    "noImplicitAny": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "types" : [ "node" ]
+  },
+  "compileOnSave": true,
+  "include":[
+    "app/**/*"
+  ],
+  "exclude": [
+    "node_modules/*",
+    "**/*-aot.ts"
+  ]
+
 }
