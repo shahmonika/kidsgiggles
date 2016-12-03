@@ -36,12 +36,13 @@
             'typescript': 'node_modules/typescript/lib/typescript.js',
             'angular2': 'node_modules/angular2',
 
-            'ts': 'npm/plugin-typescript/lib/???'
+            'ts': 'npm/plugin-typescript/lib/???',
+            'app-build':'dist'
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {
             app: {
-                main: './main.js',
+                main: '../app/main-aot.js',
                 defaultExtension: 'js'
             },
             rxjs: {
