@@ -4,26 +4,14 @@ import '../../rxjs-operators';
 
 import {Joke} from '../../joke';
 import {JokeService} from '../../joke.service';
-
-
-
-
-
-
 @Component({
-
     moduleId: module.id,                  // relative path
     selector: 'joke-detail',
     templateUrl: 'joke-detail.component.html',
     providers:[JokeService]
-
 })
-
-
 export class JokeDetailComponent implements OnInit{
-
     mode='Observable';
-
     ngOnInit():void{
         this.getJokes();
     }
@@ -34,18 +22,12 @@ export class JokeDetailComponent implements OnInit{
     // onSelect(joke: Joke): void {
     //     this.selectedHero = joke ;
     // }
-
     joke:Joke[];
     jokeses: Joke[];
-
     constructor(private jokeService :JokeService){}
-
     getJokes():void {
         this.jokeService.getJokes().subscribe( jokeses=>this.jokeses =jokeses);
     }
-
-
-
     addJoke (description: string) {
         if (!description) { return; }
         this.jokeService.addJoke(description)

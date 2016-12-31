@@ -1,79 +1,84 @@
 
 <div class="panel panel-info">
-    <div class="panel-heading">your feedback is important to us</div>
+    <div class="panel-heading"><h1>your feedback is important to us</h1></div>
     <div class="panel-body" [hidden]="submitted">
-        <form class="form-horizontal"  role="form" #feedbackForm="ngForm"  (ngSubmit)="onSubmit()" >
+        <!--<form class="form-horizontal"  role="form" #feedbackForm="ngForm"  (ngSubmit)="onSubmit()" >-->
 
 
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-xs-2"></div>
-                    <div class="col-xs-2">
-                    <label for="userEmail" class="control-label">Email</label>
-                        </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-3">
-                        <input type="text" class="form-control" id="userEmail" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
-                               name="userEmail"   [(ngModel)]="userEmail.innerText"
-                               #userEmail="ngModel" required>
-                    </div>
-                </div>
-                {{userEmail.className}}
+            <!--<div class="form-group">-->
+                <!--<div class="row">-->
+                    <!--<div class="col-xs-2"></div>-->
+                    <!--<div class="col-xs-2">-->
+                    <!--<label for="userEmail" class="control-label">Email</label>-->
+                        <!--</div>-->
+                <!--</div>-->
+                <!--<div class="row">-->
+                    <!--<div class="col-md-2"></div>-->
+                    <!--<div class="col-md-3">-->
+                        <!--<input type="text" class="form-control" id="userEmail" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"-->
+                               <!--name="userEmail"   [(ngModel)]="userEmail.innerText"-->
+                               <!--#userEmail="ngModel" required>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--{{userEmail.className}}-->
 
-                <div class="row">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-1"></div>
+                <!--<div class="row">-->
+                    <!--<div class="col-md-1"></div>-->
+                    <!--<div class="col-md-1"></div>-->
 
-                    <div  *ngIf="userEmail.errors" class="col-md-4" id="userEmailerrors">
+                    <!--<div  *ngIf="userEmail.errors" class="col-md-4" id="userEmailerrors">-->
 
-                        <div [hidden]="!userEmail.errors.required">
-                            Email is required
-                        </div>
-                        <div [hidden]="!userEmail.errors.pattern">
-                            valid Email is required
-                        </div>
+                        <!--<div [hidden]="!userEmail.errors.required">-->
+                            <!--Email is required-->
+                        <!--</div>-->
+                        <!--<div [hidden]="!userEmail.errors.pattern">-->
+                            <!--valid Email is required-->
+                        <!--</div>-->
 
-                    </div>
-                </div>
-            </div>
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
 
 
 
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-xs-2"></div>
-                    <div class="col-xs-2">
-                <label class="control-label" id="feedback" for="feedbackDescription" >Enter Feedback</label>
-                        </div>
-                    </div>
-                <div class="row">
-                    <div class="col-md-2"></div>
+            <!--<div class="form-group">-->
+                <!--<div class="row">-->
+                    <!--<div class="col-xs-2"></div>-->
+                    <!--<div class="col-xs-2">-->
+                <!--<label class="control-label" id="feedback" for="feedbackDescription" >Enter Feedback</label>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--<div class="row">-->
+                    <!--<div class="col-md-2"></div>-->
 
-                <div class="col-md-6">
-                <textarea rows="6" class="form-control" id="feedbackDescription" cols="5" name="feedback" maxlength="250"
-                          [(ngModel)]="feedbackDescription.value"  #feedbackDescription="ngModel"   required></textarea>
+                <!--<div class="col-md-6">-->
+                <!--<textarea rows="6" class="form-control" id="feedbackDescription" cols="5" name="feedback" maxlength="250"-->
+                          <!--[(ngModel)]="feedbackDescription.value"  #feedbackDescription="ngModel"   required></textarea>-->
 
-                </div>
-            </div>
+                <!--</div>-->
+            <!--</div>-->
 
-<div class="row">
+<!--<div class="row">-->
 
-</div>
-                </div>
+<!--</div>-->
+                <!--</div>-->
 
-            <div class="form-group">
-                <div class="row">
-                <div class="col-md-offset-2 col-md-10">
-                    <button type="submit" class="col-md-2 btn btn-success"  [disabled]="!feedbackForm.form.valid"   data-toggle="modal"
-                            data-target="#myModal" >submit the feedback</button>
-                </div>
-                </div>
+            <!--<div class="form-group">-->
+                <!--<div class="row">-->
+                <!--<div class="col-md-offset-2 col-md-10">-->
+                    <!--<button type="submit" class="col-md-2 btn btn-success"  [disabled]="!feedbackForm.form.valid"-->
+                            <!--data-toggle="modal"-->
+                            <!--data-target="#myModal" >submit the feedback</button>-->
+                <!--</div>-->
+                <!--</div>-->
 
-            </div>
+            <!--</div>-->
 
-        </form>
+        <!--</form>-->
+        <button (click)="clicked()">submit the feedback</button>
+
+        <!--<span>{{message}}</span>-->
+
     </div>
 
     <!-- Modal -->
