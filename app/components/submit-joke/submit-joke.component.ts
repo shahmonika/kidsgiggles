@@ -16,6 +16,14 @@ selector: 'submit-joke',
 
 })
 export class SubmitJokeComponent{
+    joke:Joke[];
+    jokeses:Joke[];
+    constructor(private jokeService:JokeService){}
+
+    addJoke (description:string){
+    if(!description){return;}
+        this.jokeService.addJoke(description).subscribe(joke=>this.jokeses.push(joke));
+    }
     // @Input()
     // joke: Joke;
 

@@ -1,17 +1,69 @@
 
 
-<div>
-    <h2>submit jokes</h2>
 
 
+<div class="panel panel-info">
+    <div class="panel-heading">Share your  jokes : Please submit here.</div>
+    <div class="panel-body" >
+        <form>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-2"></div>
+                    <div class="col-xs-2">
+                        <label for="userEmail" class="control-label">Email</label>
+                    </div>
+                </div>
 
-    <!--<h2>{{joke.description}} details!</h2>-->
-    <!--<label>id: </label>{{joke._id}}-->
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" id="userEmail" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                               name="userEmail"   [(ngModel)]="userEmail.innerText"
+                               #userEmail="ngModel" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-2"></div>
+                        <div class="col-xs-2">
+                            <label class="control-label"  >Enter joke</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+
+                         <div class="col-md-6">
+
+                              <textarea row="12" col="12" class="form-control" #newJokeName maxlength="250"></textarea>
+                          </div>
+                    </div>
+            </div>
 
 
+            <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-offset-2 col-md-10">
+                              <button (click)="addJoke(newJokeName.value); newJokeName.value=''"  class="col-md-2 btn btn-success">Add joke</button>
+                        </div>
+                    </div>
+            </div>
 
-    <label>type ur New joke  <input #newJokeName /></label>
-    <button (click)="addJoke(newJokeName.value); newJokeName.value=''">Add joke</button>
 
-</div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-10">
+                        <label> Please note: Your submitted jokes will be posted after being reviewed.</label>
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+
+
+    </div>
+
+
 

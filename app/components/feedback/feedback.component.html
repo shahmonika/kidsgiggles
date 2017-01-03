@@ -20,7 +20,7 @@
                                #userEmail="ngModel" required>
                     </div>
                 </div>
-                {{userEmail.className}}
+
 
                 <div class="row">
                     <div class="col-md-1"></div>
@@ -66,14 +66,16 @@
             <div class="form-group">
                 <div class="row">
                 <div class="col-md-offset-2 col-md-10">
-                    <button type="submit" class="col-md-2 btn btn-success"  [disabled]="!feedbackForm.form.valid"   data-toggle="modal"
-                            data-target="#myModal" >submit the feedback</button>
+                    <button type="submit" class="col-md-2 btn btn-success"  [disabled]="!feedbackForm.form.valid"
+                            data-toggle="modal"
+                            data-target="#myModal" (click)="addJoke(feedbackDescription.value)">submit the feedback</button>
                 </div>
                 </div>
 
             </div>
 
         </form>
+
     </div>
 
     <!-- Modal -->
@@ -97,3 +99,6 @@
         </div>
     </div>
 </div>
+<div *ngIf="submitted==true">
+<joke-detail></joke-detail>
+    </div>

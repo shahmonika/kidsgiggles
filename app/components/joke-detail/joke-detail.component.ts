@@ -46,13 +46,13 @@ export class JokeDetailComponent implements OnInit{
 
 
 
-    addJoke (description: string) {
-        if (!description) { return; }
-        this.jokeService.addJoke(description)
-            .subscribe(
-                joke => this.jokeses.push(joke));
-
-    }
+    // addJoke (description: string) {
+    //     if (!description) { return; }
+    //     this.jokeService.addJoke(description)
+    //         .subscribe(
+    //             joke => this.jokeses.push(joke));
+    //
+    // }
 }
 
 

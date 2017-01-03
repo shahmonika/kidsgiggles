@@ -1,20 +1,12 @@
-<div>
-    <h1>Prepare to be giggled </h1>
-    <h3>{{title}}</h3>
+<div class="panel panel-info">
+    <div class="panel-heading">{{title}}</div>
+    <h4>Prepare to be giggled </h4>
 
-    <ul class="jokeses">
+    <ul class="jokeses" class="list group">
 
-        <li *ngFor="let joke of jokeses">
-            <!--<span class="badge">{{joke._id._id}}</span> {{joke._id.description}}-->
-            <span class="badge">{{joke._id}}</span> {{joke.description}}
+        <li  class="list-group-item"   *ngFor="let joke of jokeses">
+            <span > {{joke._id.description}}</span>
+
         </li>
     </ul>
-
-
-
-    <!--<h6>vvvvvvvvvv</h6>-->
-    <!--<label>New joke name: <input #newJokeName /></label>-->
-    <!--<button (click)="addJoke(newJokeName.value); newJokeName.value=''">Add joke</button>-->
-
-    <!--<my-joke-detail> </my-joke-detail>-->
 </div>
