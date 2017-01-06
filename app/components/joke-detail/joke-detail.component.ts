@@ -1,12 +1,12 @@
 
-import { Component ,OnInit} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import '../../rxjs-operators';
 
 import {Joke} from '../../joke';
 import {JokeService} from '../../joke.service';
 
 
-
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 
 
@@ -23,7 +23,7 @@ import {JokeService} from '../../joke.service';
 export class JokeDetailComponent implements OnInit{
 
     mode='Observable';
-
+ is_Liked=false;
     ngOnInit():void{
         this.getJokes();
     }
@@ -35,9 +35,9 @@ export class JokeDetailComponent implements OnInit{
     //     this.selectedHero = joke ;
     // }
 
-    joke:Joke[];
+    joke: Joke[];
     jokeses: Joke[];
-
+count=0;
     constructor(private jokeService :JokeService){}
 
     getJokes():void {
@@ -45,6 +45,37 @@ export class JokeDetailComponent implements OnInit{
     }
 
 
+  @Input() size :number;
+    @Output() sizeChange = new EventEmitter<number>();
+
+
+    like(){
+
+this.resize(+1);
+        alert("hello");
+    }
+
+resize(delta:number){
+    this.size=1+ delta;
+    alert(this.size);
+    this.sizeChange.emit(this.size);
+}
+
+
+
+
+// like(joke_id:string){
+//
+//  var id1=this.count++;
+//
+//     // if(('#cnt')+joke_id)
+//         return id1;
+//
+//    //
+//
+//   //if(('#cnt')+joke_id)==joke_id)
+//   //  return this.count++;
+// }
 
     // addJoke (description: string) {
     //     if (!description) { return; }

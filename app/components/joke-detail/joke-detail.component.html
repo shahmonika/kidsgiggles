@@ -6,7 +6,14 @@
 
         <li  class="list-group-item"   *ngFor="let joke of jokeses">
             <span > {{joke._id.description}}</span>
-
+            <tr>
+            <!--<button type="button" id="cnt1{{joke._id._id}}" class="btn btn-default" (click)="like(joke._id._id)">-->
+                <button type="button" id="cnt1{{joke._id._id}}" class="btn btn-default" (click)="like()">
+                <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true">
+                </span>
+            </button>
+                <span  id="likes" textContent="id1" >{{joke._id.likesCount}}</span>
+            </tr>
         </li>
     </ul>
 </div>

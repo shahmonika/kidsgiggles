@@ -1,1 +1,1 @@
-{"version":3,"file":"joke.js","sourceRoot":"","sources":["joke.ts"],"names":[],"mappings":";AAEA;IAEA,cACU,GAAW,EACV,WAAmB;QADpB,QAAG,GAAH,GAAG,CAAQ;QACV,gBAAW,GAAX,WAAW,CAAQ;IAC3B,CAAC;IAEJ,WAAC;AAAD,CAAC,AAPD,IAOC;AAPY,oBAAI"}
+{"version":3,"file":"joke.js","sourceRoot":"","sources":["joke.ts"],"names":[],"mappings":";AAEA;IAEA,cACU,GAAW,EACV,WAAmB,EACpB,UAAiB;QAFjB,QAAG,GAAH,GAAG,CAAQ;QACV,gBAAW,GAAX,WAAW,CAAQ;QACpB,eAAU,GAAV,UAAU,CAAO;IACxB,CAAC;IAEJ,WAAC;AAAD,CAAC,AARD,IAQC;AARY,oBAAI"}

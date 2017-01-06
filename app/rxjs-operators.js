@@ -1,9 +1,9 @@
+//import 'rxjs/add/observable/throw';
 "use strict";
-require("rxjs/add/observable/throw");
-require("rxjs/add/operator/catch");
-require("rxjs/add/operator/debounceTime");
-require("rxjs/add/operator/distinctUntilChanged");
+//import 'rxjs/add/operator/catch';
+//import 'rxjs/add/operator/debounceTime';
+//import 'rxjs/add/operator/distinctUntilChanged';
 require("rxjs/add/operator/map");
-require("rxjs/add/operator/switchMap");
-require("rxjs/add/operator/toPromise");
+//import 'rxjs/add/operator/switchMap';
+//import 'rxjs/add/operator/toPromise'; 
 //# sourceMappingURL=rxjs-operators.js.map
