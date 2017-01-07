@@ -1,47 +1,39 @@
-
 // the entry point to your application
+import {NgModule}      from '@angular/core';
+import {FormsModule}    from '@angular/forms';
 
 
-import { NgModule }      from '@angular/core';
-import { FormsModule }    from '@angular/forms';
-
-
-import { HttpModule, JsonpModule } from '@angular/http';
-import { InMemoryWebApiModule }     from 'angular-in-memory-web-api';
- //application is a web application that runs in a browser
-
-import { BrowserModule } from '@angular/platform-browser';
+import {HttpModule, JsonpModule} from '@angular/http';
+import {InMemoryWebApiModule}     from 'angular-in-memory-web-api';
+//application is a web application that runs in a browser
+import {BrowserModule} from '@angular/platform-browser';
 //import the root component and add in declaration and bootstrap
+import {AppComponent}   from './app.component';
 
-import { AppComponent }   from './app.component';
-
-import { JokeDetailComponent } from './components/joke-detail/joke-detail.component';
+import {JokeDetailComponent} from './components/joke-detail/joke-detail.component';
 import {JokeService} from './joke.service';
 import {ContactUsComponent} from './components/contact-us/contact-us.component';
-import {RouterModule } from '@angular/router';
+import {RouterModule} from '@angular/router';
 import{SubmitJokeComponent} from './components/submit-joke/submit-joke.component';
 import{FeedbackComponent} from './components/feedback/feedback.component';
 import {AppRoutingModule}from './app-routing.module';
 @NgModule({
-    imports:      [
+    imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
-        JsonpModule
-         ,AppRoutingModule
-
-        ],
+        JsonpModule,
+        AppRoutingModule
+    ],
     declarations: [
-        AppComponent ,
+        AppComponent,
         JokeDetailComponent,
         ContactUsComponent,
-        SubmitJokeComponent,FeedbackComponent
+        SubmitJokeComponent,
+        FeedbackComponent
     ],
-
-    providers:[JokeService],
-    bootstrap:[AppComponent]
-
+    providers: [JokeService],
+    bootstrap: [AppComponent]
 })
-
-
-export class AppModule { }
+export class AppModule {
+}

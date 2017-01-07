@@ -4,12 +4,6 @@ import '../../rxjs-operators';
 
 import {Joke} from '../../joke';
 import {JokeService} from '../../joke.service';
-
-
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-
-
-
 @Component({
 
     moduleId: module.id,                  // relative path
@@ -19,11 +13,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 })
 
-
 export class JokeDetailComponent implements OnInit{
 
     mode='Observable';
- is_Liked=false;
+    is_Liked=false;
     ngOnInit():void{
         this.getJokes();
     }
@@ -37,29 +30,17 @@ export class JokeDetailComponent implements OnInit{
 
     joke: Joke[];
     jokeses: Joke[];
-count=0;
+
+
     constructor(private jokeService :JokeService){}
 
     getJokes():void {
         this.jokeService.getJokes().subscribe( jokeses=>this.jokeses =jokeses);
     }
 
-
-  @Input() size :number;
-    @Output() sizeChange = new EventEmitter<number>();
-
-
-    like(){
-
-this.resize(+1);
-        alert("hello");
+    liked(index: number){
+        this.jokeses[index].likesCount = this.jokeses[index].likesCount + 1;
     }
-
-resize(delta:number){
-    this.size=1+ delta;
-    alert(this.size);
-    this.sizeChange.emit(this.size);
-}
 
 
 

@@ -4,15 +4,16 @@
 
     <ul class="jokeses" class="list group">
 
-        <li  class="list-group-item"   *ngFor="let joke of jokeses">
-            <span > {{joke._id.description}}</span>
+        <li class="list-group-item" *ngFor="let joke of jokeses; let i = index">
+            <span> {{joke._id.description}}</span>
             <tr>
-            <!--<button type="button" id="cnt1{{joke._id._id}}" class="btn btn-default" (click)="like(joke._id._id)">-->
-                <button type="button" id="cnt1{{joke._id._id}}" class="btn btn-default" (click)="like()">
+                <!--<button type="button" id="cnt1{{joke._id._id}}" class="btn btn-default" (click)="like(joke._id._id)">-->
+                <button type="button" id="cnt1{{joke._id._id}}" class="btn btn-default"
+                        (click)="liked(i)">
                 <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true">
                 </span>
-            </button>
-                <span  id="likes" textContent="id1" >{{joke._id.likesCount}}</span>
+                </button>
+                <span id="likes">{{joke.likesCount}}</span>
             </tr>
         </li>
     </ul>

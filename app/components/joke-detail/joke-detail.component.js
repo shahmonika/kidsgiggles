@@ -11,15 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 require("../../rxjs-operators");
 var joke_service_1 = require("../../joke.service");
-var core_2 = require("@angular/core");
 var JokeDetailComponent = (function () {
     function JokeDetailComponent(jokeService) {
         this.jokeService = jokeService;
         this.mode = 'Observable';
         this.is_Liked = false;
         this.title = 'jokes are here';
-        this.count = 0;
-        this.sizeChange = new core_2.EventEmitter();
     }
     JokeDetailComponent.prototype.ngOnInit = function () {
         this.getJokes();
@@ -28,25 +25,11 @@ var JokeDetailComponent = (function () {
         var _this = this;
         this.jokeService.getJokes().subscribe(function (jokeses) { return _this.jokeses = jokeses; });
     };
-    JokeDetailComponent.prototype.like = function () {
-        this.resize(+1);
-        alert("hello");
-    };
-    JokeDetailComponent.prototype.resize = function (delta) {
-        this.size = 1 + delta;
-        alert(this.size);
-        this.sizeChange.emit(this.size);
+    JokeDetailComponent.prototype.liked = function (index) {
+        this.jokeses[index].likesCount = this.jokeses[index].likesCount + 1;
     };
     return JokeDetailComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Number)
-], JokeDetailComponent.prototype, "size", void 0);
-__decorate([
-    core_2.Output(),
-    __metadata("design:type", Object)
-], JokeDetailComponent.prototype, "sizeChange", void 0);
 JokeDetailComponent = __decorate([
     core_1.Component({
         moduleId: module.id,

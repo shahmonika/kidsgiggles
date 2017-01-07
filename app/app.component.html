@@ -1,34 +1,28 @@
 <div class="container">
-
     <nav class="navbar ">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">kidslaughs</a>
             </div>
-
-
             <ol class="nav navbar-nav navbar-right">
                 <ol class="breadcrumb">
-                <li><a href="#"> Home</a></li>
-                <li>
-                    <a routerLink="/contact-us" >contact us</a>
+                    <li><a href="#"> Home</a></li>
+                    <li>
+                        <a routerLink="/contact-us">contact us</a>
                     </li>
-                <li><a routerLink="/feedback"> Feedback</a></li>
-                    </ol>
+                    <li><a routerLink="/feedback"> Feedback</a></li>
+                </ol>
             </ol>
         </div>
     </nav>
-
-
     <div>
-
         <a type="button" class="btn btn-primary" routerLink="/submit-joke"> submit Jokes</a>
-    <a type="button" class="btn btn-warning active" routerLink="/joke-detail" routerLinkActive="active"> jokes</a>
+        <a type="button" class="btn btn-warning active" routerLink="/joke-detail" routerLinkActive="active"> jokes</a>
 
-    <a type="button" class="btn btn-primary" routerLink="">most liked jokes</a>
+        <a type="button" class="btn btn-primary" routerLink="">most liked jokes</a>
     </div>
     <div class="row"> &nbsp; </div>
-<div class="row">
-    <router-outlet></router-outlet>
+    <div class="row">
+        <router-outlet></router-outlet>
     </div>
 </div>

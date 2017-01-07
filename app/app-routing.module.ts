@@ -2,17 +2,13 @@ import {ContactUsComponent} from './components/contact-us/contact-us.component';
 import {JokeDetailComponent} from './components/joke-detail/joke-detail.component';
 import {SubmitJokeComponent} from './components/submit-joke/submit-joke.component';
 import {FeedbackComponent} from './components/feedback/feedback.component';
-
-
 import {NgModule} from '@angular/core';
-import {RouterModule, Routes, RouterState} from '@angular/router';
-
-
-const routes:Routes=[
+import {RouterModule, Routes} from '@angular/router';
+const routes: Routes = [
     {
-        path:'',
-        redirectTo:'joke-detail',
-        pathMatch:'full'
+        path: '',
+        redirectTo: 'joke-detail',
+        pathMatch: 'full'
     },
     {
         path: 'contact-us',
@@ -23,18 +19,18 @@ const routes:Routes=[
         component: JokeDetailComponent
     },
     {
-        path:'submit-joke',
+        path: 'submit-joke',
         component: SubmitJokeComponent
     },
     {
-        path:'feedback',
-        component:FeedbackComponent
+        path: 'feedback',
+        component: FeedbackComponent
     }
 ];
 @NgModule({
-    imports:[RouterModule.forRoot(routes)],
-    exports:[RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
-export class AppRoutingModule{
+export class AppRoutingModule {
 
 }

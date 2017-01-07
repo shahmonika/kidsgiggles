@@ -27,12 +27,6 @@ var JokeService = (function () {
         return this.http.post(this.jokesUrlfeedback, JSON.stringify(description), options)
             .map(this.extractData);
     };
-    JokeService.prototype.addJoke = function (description) {
-        var headers = new http_2.Headers({ 'Content-Type': 'application/json' });
-        var options = new http_2.RequestOptions({ headers: headers });
-        return this.http.post(this.jokesUrl, JSON.stringify(description), options)
-            .map(this.extractData);
-    };
     JokeService.prototype.extractData = function (res) {
         var body = res.json();
         return body.jokes || {};
