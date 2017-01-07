@@ -18,8 +18,7 @@ export class JokeService {
 
         let headers = new Headers({'Content-Type': 'application/json'});
         let options = new RequestOptions({headers: headers});
-
-        return this.http.post(this.jokesUrlfeedback, JSON.stringify(description), options)
+        return this.http.post(this.jokesUrlfeedback,JSON.stringify(description), options)
             .map(this.extractData);
     }
     private extractData(res: Response) {
