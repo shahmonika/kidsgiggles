@@ -13,6 +13,7 @@ var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
         this.class = 'relative';
+
         this.title = 'Jokes for Kids';
     }
     return AppComponent;
