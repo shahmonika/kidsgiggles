@@ -22,10 +22,10 @@
                     <div class="col-md-1"></div>
                     <div  *ngIf="userEmail.errors" class="col-md-4" id="userEmailerrors">
                         <div [hidden]="!userEmail.errors.required">
-                            Email is required
+                            Email is required.
                         </div>
                         <div [hidden]="!userEmail.errors.pattern">
-                            Valid email is required
+                            Valid email is required.
                         </div>
                     </div>
                 </div>
