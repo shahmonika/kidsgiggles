@@ -20,6 +20,7 @@ var routes = [
         redirectTo: 'joke-detail',
         pathMatch: 'full'
     },
+
     {
         path: 'contact-us',
         component: contact_us_component_1.ContactUsComponent
