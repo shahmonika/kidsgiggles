@@ -22,6 +22,7 @@ import {AppRoutingModule}from './app-routing.module';
         BrowserModule,
         FormsModule,
         HttpModule,
+
         JsonpModule,
         AppRoutingModule
     ],
