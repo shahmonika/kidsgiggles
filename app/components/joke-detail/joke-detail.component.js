@@ -15,9 +15,9 @@ var JokeDetailComponent = (function () {
     function JokeDetailComponent(jokeService) {
         this.jokeService = jokeService;
         this.mode = 'Observable';
-        this.is_Liked = false;
-        this.title = 'jokes are here';
+        this.title = 'Jokes are here!!!';
     }
+    // is_Liked=false;
     JokeDetailComponent.prototype.ngOnInit = function () {
         this.getJokes();
     };

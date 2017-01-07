@@ -1,4 +1,3 @@
-// the entry point to your application
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -9,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+// the entry point to your application
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/http");
@@ -40,7 +40,8 @@ AppModule = __decorate([
             app_component_1.AppComponent,
             joke_detail_component_1.JokeDetailComponent,
             contact_us_component_1.ContactUsComponent,
-            submit_joke_component_1.SubmitJokeComponent, feedback_component_1.FeedbackComponent
+            submit_joke_component_1.SubmitJokeComponent,
+            feedback_component_1.FeedbackComponent
         ],
         providers: [joke_service_1.JokeService],
         bootstrap: [app_component_1.AppComponent]
