@@ -10,12 +10,10 @@ import {JokeService} from '../../joke.service';
 })
 export class JokeDetailComponent implements OnInit{
     mode='Observable';
-   // is_Liked=false;
     ngOnInit():void{
         this.getJokes();
     }
     title='Jokes are here!!!';
-   // joke: Joke[];
     jokeses: Joke[];
     constructor(private jokeService :JokeService){}
     getJokes():void {
