@@ -9,6 +9,7 @@ const routes: Routes = [
         path: '',
         redirectTo: 'joke-detail',
         pathMatch: 'full'
+
     },
     {
         path: 'contact-us',
