@@ -4,7 +4,6 @@
  */
 (function (global) {
     System.config({
-
         defaultJSExtensions: true,
         transpiler: false,
         typescriptOptions: {
@@ -35,7 +34,6 @@
             'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
             'typescript': 'node_modules/typescript/lib/typescript.js',
             'angular2': 'node_modules/angular2',
-
             'ts': 'npm/plugin-typescript/lib/???'
         },
         // packages tells the System loader how to load when no filename and/or no extension
