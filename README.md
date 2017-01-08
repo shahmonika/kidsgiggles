@@ -3,18 +3,31 @@
 angular2/Typescript project for kidsgiggles
 ```
 
-#PreRequisites
+###PreRequisites
 ```
 install node
 ```
 
-#Get the Code
+###Get the Code
 ```
 git clone [https://github.com/shahmonika/kidsgiggles.git]
 cd kidsgiggles
 ```
 
-#Just in Time(JiT) Compilation
+###Just in Time(JiT) Compilation
+Runs the typescript compiler and launches the app.
 ```
 npm start
+```
+###Build
+```
+in-progress
+```
+###Test
+```
+run npm test
+```
+Notes
+```
+
 ```
