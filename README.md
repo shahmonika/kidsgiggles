@@ -11,7 +11,7 @@ install node
 
 ###Get the Code
 ```
-git clone [https://github.com/shahmonika/kidsgiggles.git]
+git clone [https://github.com/shahmonika/kidsgiggles.git](https://github.com/shahmonika/kidsgiggles.git)
 cd kidsgiggles
 ```
 
