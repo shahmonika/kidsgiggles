@@ -1,4 +1,5 @@
 # kidsgiggles
+The app displays jokes for the kids,asking for their feedback and also asking them to post their jokes.
 ```
 angular2/Typescript project for kidsgiggles
 ```
