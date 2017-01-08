@@ -12,7 +12,10 @@ install node
 ###Get the Code
 ```
 git clone https://github.com/shahmonika/kidsgiggles.git
-cd kidsgiggles
+```
+###Install npm dependencies
+```
+npm install
 ```
 
 ###Just in Time(JiT) Compilation
