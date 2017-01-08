@@ -1,5 +1,5 @@
 # kidsgiggles
-The app displays jokes for the kids,asking for their feedback and also akids can post their jokes.
+The app displays jokes for the kids,where they can post their jokes and feedback.
 ```
 angular2/Typescript project for kidsgiggles
 ```
@@ -21,6 +21,7 @@ Runs the typescript compiler and launches the app.
 npm start
 ```
 ###Build
+roll-up/webpack
 ```
 in-progress
 ```
@@ -28,7 +29,4 @@ in-progress
 ```
 run npm test
 ```
-Notes
-```
 
-```
