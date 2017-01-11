@@ -1,3 +1,4 @@
+
 // the entry point to your application
 import {NgModule}      from '@angular/core';
 import {FormsModule}    from '@angular/forms';
@@ -9,7 +10,7 @@ import {InMemoryWebApiModule}     from 'angular-in-memory-web-api';
 import {BrowserModule} from '@angular/platform-browser';
 //import the root component and add in declaration and bootstrap
 import {AppComponent}   from './app.component';
-
+import{SeedConfig} from './seed.config';
 import {JokeDetailComponent} from './components/joke-detail/joke-detail.component';
 import {JokeService} from './joke.service';
 import {ContactUsComponent} from './components/contact-us/contact-us.component';
@@ -33,7 +34,7 @@ import {AppRoutingModule}from './app-routing.module';
         SubmitJokeComponent,
         FeedbackComponent
     ],
-    providers: [JokeService],
+    providers: [JokeService,SeedConfig],
     bootstrap: [AppComponent]
 })
 export class AppModule {

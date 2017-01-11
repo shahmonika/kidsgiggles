@@ -16,6 +16,7 @@ var http_1 = require("@angular/http");
 var platform_browser_1 = require("@angular/platform-browser");
 //import the root component and add in declaration and bootstrap
 var app_component_1 = require("./app.component");
+var seed_config_1 = require("./seed.config");
 var joke_detail_component_1 = require("./components/joke-detail/joke-detail.component");
 var joke_service_1 = require("./joke.service");
 var contact_us_component_1 = require("./components/contact-us/contact-us.component");
@@ -43,7 +44,7 @@ AppModule = __decorate([
             submit_joke_component_1.SubmitJokeComponent,
             feedback_component_1.FeedbackComponent
         ],
-        providers: [joke_service_1.JokeService],
+        providers: [joke_service_1.JokeService, seed_config_1.SeedConfig],
         bootstrap: [app_component_1.AppComponent]
     }),
     __metadata("design:paramtypes", [])

@@ -1,3 +1,6 @@
+/// <reference path="../../node_modules/@types/node/index.d.ts" />
+
+
 {
   "compilerOptions": {
     "target": "es5",
@@ -7,6 +10,13 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "removeComments": false,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "lib": ["es2015", "dom"],
+    "types":["node"],
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+
   }
 }
+

@@ -11,15 +11,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 var http_2 = require("@angular/http");
+var seed_config_1 = require("./seed.config");
 var JokeService = (function () {
-    function JokeService(http) {
+    function JokeService(http, seedConfig) {
         this.http = http;
-        // private jokesUrl='app/joke.json'; //url to json
-        this.jokesUrl = 'http://kejokesapi.herokuapp.com/jokes';
-        this.jokesUrlfeedback = 'http://kejokesapi.herokuapp.com/feedbacks/create';
+        this.seedConfig = seedConfig;
+        this.jokesUrl = this.seedConfig.api;
+        this.routee = '/jokes';
+        this.routee2 = '/feedbacks/create';
+        this.jokesUrl1 = this.jokesUrl + this.routee;
+        this.jokesUrlfeedback = this.jokesUrl + this.routee2;
     }
+    // constructor(private http: Http, private seedConfig :SeedConfig) {
+    // }
     JokeService.prototype.getJokes = function () {
-        return this.http.get(this.jokesUrl).map(this.extractData);
+        return this.http.get(this.jokesUrl1).map(this.extractData);
     };
     JokeService.prototype.addJoke = function (description) {
         var headers = new http_2.Headers({ 'Content-Type': 'application/json' });
@@ -35,7 +41,7 @@ var JokeService = (function () {
 }());
 JokeService = __decorate([
     core_1.Injectable(),
-    __metadata("design:paramtypes", [http_1.Http])
+    __metadata("design:paramtypes", [http_1.Http, seed_config_1.SeedConfig])
 ], JokeService);
 exports.JokeService = JokeService;
 //# sourceMappingURL=joke.service.js.map

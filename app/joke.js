@@ -7,6 +7,5 @@ var Joke = (function () {
     }
     return Joke;
 }());
-
 exports.Joke = Joke;
 //# sourceMappingURL=joke.js.map

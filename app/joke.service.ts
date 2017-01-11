@@ -4,15 +4,21 @@ import {Http, Response} from '@angular/http';
 import {Joke} from './joke';
 import {Observable} from 'rxjs/Observable';
 import {Headers, RequestOptions} from '@angular/http';
+import {SeedConfig} from "./seed.config";
+
 @Injectable()
 export class JokeService {
-    // private jokesUrl='app/joke.json'; //url to json
-    private jokesUrl = 'http://kejokesapi.herokuapp.com/jokes';
-    private jokesUrlfeedback = 'http://kejokesapi.herokuapp.com/feedbacks/create';
-    constructor(private http: Http) {
-    }
+    constructor(private http: Http, private seedConfig :SeedConfig) {}
+
+    private  jokesUrl=this.seedConfig.api;
+    private  routee='/jokes';
+    private routee2='/feedbacks/create';
+    private   jokesUrl1= this.jokesUrl + this.routee;
+    private jokesUrlfeedback = this.jokesUrl+this.routee2;
+    // constructor(private http: Http, private seedConfig :SeedConfig) {
+    // }
     getJokes(): Observable<Joke[]> {
-        return this.http.get(this.jokesUrl).map(this.extractData);
+        return this.http.get(this.jokesUrl1).map(this.extractData);
     }
     addJoke(description: string): Observable<Joke> {
 

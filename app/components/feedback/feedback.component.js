@@ -18,8 +18,8 @@ var FeedbackComponent = (function () {
         this.submitted = false;
     }
     FeedbackComponent.prototype.onSubmit = function () {
-        this.msg = 'The jokes are posted after the review';
         this.submitted = true;
+        this.msg = 'We value your feedback';
     };
     FeedbackComponent.prototype.addJoke = function (description) {
         var _this = this;

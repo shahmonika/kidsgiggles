@@ -1,5 +1,5 @@
 <div class="panel panel-info">
-    <div class="panel-heading">your feedback is important to us</div>
+    <div class="panel-heading" [hidden]="submitted">Your feedback is important to us.</div>
     <div class="panel-body" [hidden]="submitted">
         <form class="form-horizontal"  role="form" #feedbackForm="ngForm"  (ngSubmit)="onSubmit()" >
             <div class="form-group">
@@ -55,7 +55,7 @@
                 <div class="col-md-offset-2 col-md-10">
                     <button type="submit" class="col-md-2 btn btn-success"  [disabled]="!feedbackForm.form.valid"
                             data-toggle="modal"
-                            data-target="#myModal" (click)="addJoke(feedbackDescription.value)">submit the feedback</button>
+                            data-target="#myModal" (click)="addJoke(feedbackDescription.value)" >Submit the feedback</button>
                 </div>
                 </div>
 

@@ -8,4 +8,5 @@ import {Component} from '@angular/core';
 export class AppComponent {
     class = 'relative';
     title = 'Jokes for Kids';
+
 }

@@ -19,8 +19,9 @@ export class FeedbackComponent {
     submitted = false;
 
     onSubmit() {
-        this.msg = 'The jokes are posted after the review';
         this.submitted = true;
+        this.msg = 'We value your feedback';
+
     }
 
     addJoke(description: string) {
