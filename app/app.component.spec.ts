@@ -20,6 +20,7 @@ describe('AppComponent(templateUrl)',()=> {
     let de: DebugElement;
     let el: HTMLElement;
 
+
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [AppComponent, RouterLinkStubDirective, RouterOutletStubComponent],
